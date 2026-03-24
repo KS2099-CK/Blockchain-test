@@ -10,7 +10,7 @@
     \
     // Connect to the Blockchain (using a provider like MetaMask or Infura)\
     const provider = new ethers.providers.Web3Provider(window.ethereum);\
-    const contractAddress = "YOUR_CONTRACT_ADDRESS_FROM_REMIX";\
+    const contractAddress = "0x1351abC61c62915fb3FDf6c804e716ec9e7DF01C";\
     \
     // The "ABI" tells the website how to talk to your specific code\
     const abi = [ "function batches(uint256) view returns (string, string, uint8, uint256, address)" ];\
