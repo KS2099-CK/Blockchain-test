@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coffee Trace</title>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"></script>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        input, button {
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        #results {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>☕ Coffee Journey Tracker</h1>
+
+    <input type="number" id="batchId" placeholder="Enter Batch ID (e.g. 1)">
+    <br>
+    <button onclick="getJourney()">Trace My Beans</button>
+
+    <div id="results">
+        <p><strong>Farm:</strong> <span id="displayFarm"></span></p>
+        <p><strong>Origin:</strong> <span id="displayOrigin"></span></p>
+        <p><strong>Current Status:</strong> <span id="displayStatus"></span></p>
+    </div>
+
+    <script>
+        // TEMP TEST FUNCTION (remove when app.js is working)
+        function getJourney() {
+            const batchId = document.getElementById("batchId").value;
+
+            if (!batchId) {
+                alert("Please enter batch ID");
+                return;
+            }
+
+            document.getElementById("displayFarm").innerText = "Blue Mountain Farm";
+            document.getElementById("displayOrigin").innerText = "Ethiopia";
+            document.getElementById("displayStatus").innerText = "Roasted & Packed";
+
+            document.getElementById("results").style.display = "block";
+        }
+    </script>
+
+    <!-- Make sure this path is correct -->
+    <!-- <script src="app.js"></script> -->
+
+</body>
+</html>
